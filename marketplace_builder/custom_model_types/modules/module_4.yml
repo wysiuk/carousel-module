@@ -1,0 +1,56 @@
+---
+name: module_4
+properties:
+- name: name
+  type: string
+- name: slug
+  type: string
+- name: weighting
+  type: integer
+- name: release_date
+  type: integer
+- name: expiry_date
+  type: integer
+- name: enabled
+  type: boolean
+- name: category_array
+  type: array
+- name: meta_title
+  type: text
+- name: meta_desc
+  type: text
+- name: og_title
+  type: text
+- name: og_desc
+  type: text
+- name: og_image
+  type: text
+- name: og_type
+  type: string
+- name: og_url
+  type: text
+- name: twitter_type
+  type: string
+- name: full_slug
+  type: string
+- name: secure_zone_array
+  type: array
+- name: location
+  type: geojson
+- name: address
+  type: text
+- name: module_field_4_1
+  type: text
+- name: module_field_4_2
+  type: text
+- name: module_field_4_3
+  type: string
+- name: module_field_4_4
+  type: text
+- name: module_field_4_5
+  type: text
+- name: module_field_4_6
+  type: text
+- name: module_field_4_7
+  type: text
+---

@@ -1,0 +1,28 @@
+<section class="sg-hero sg-hero-06 sg-bg-light">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 px-0">
+        <div id="{{ name | replace: ' ', '' }}" class="carousel slide {% if dark == 'true' %}carousel-dark{% endif %} {% if crossfade == 'true' %}carousel-fade{% endif %}" {% if touch == 'false' %}data-bs-touch="false"{% endif %} data-bs-ride="carousel">
+          {% if indicators == 'true' %}
+            <div class="carousel-indicators">
+              {%- include 'webapp', id: '1', layout: 'indicators', per_page: '20', name: name, show_pagination: 'false', sort_type: 'properties.name', sort_order: 'asc' -%}
+            </div>
+          {% endif %}
+          <div class="carousel-inner">
+            {%- include 'webapp', id: '1', layout: 'default', per_page: '20', show_pagination: 'false', sort_type: 'properties.name', sort_order: 'asc', timer: timer -%}
+          </div>
+          {% if arrows == 'true' %}
+          <button class="carousel-control-prev" type="button" data-bs-target="#{{ name | replace: ' ', '' }}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#{{ name | replace: ' ', '' }}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+---
+default_payload: ''
+fields:
+  properties:
+    module_detail_template:
+      name: module_detail_template
+      value: templates/blank_page
+      property_options:
+        virtual: true
+    module_detail_default_layout:
+      name: module_detail_default_layout
+      value: default
+      property_options:
+        virtual: true
+    address:
+      name: Address
+      type: input_text
+      live: true
+      hidden: false
+      order: 3
+      editable: true
+      force: true
+      required: false
+      validation: {}
+    email:
+      name: Email
+      type: input_text
+      live: true
+      hidden: false
+      order: 1
+      editable: true
+      force: true
+      required: false
+      validation: {}
+    name:
+      name: Name
+      type: input_text
+      live: true
+      hidden: false
+      order: 0
+      editable: true
+      force: true
+      required: true
+      validation:
+        presence: true
+    primary_contact:
+      name: Primary Contact
+      type: input_text
+      live: true
+      hidden: false
+      order: 2
+      editable: true
+      force: true
+      required: false
+      validation: {}
+flash_alert: ''
+flash_notice: ''
+name: company
+resource: modules/siteglide_system/company
+resource_owner: anyone
+---
+{%- capture form_layout -%}layouts/webapps/company/form/{{_layout}}{%- endcapture -%}
+{%- include form_layout -%}

@@ -1,0 +1,206 @@
+.sg-blog {
+    &.sg-blog-01 {
+        .card {
+            .card-img {
+                img {
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.sg-faq {
+    &.sg-faq-01 {
+        .accordion {
+            .sg-card {
+                border-bottom: 1px solid rgba($color-black,.125);
+            }
+        }
+    }
+}
+
+.sg-hero {
+    &.sg-hero-04 {
+        h1 {
+            &:after {
+                background-color: $color-primary;
+                content: "";
+                display: block;
+                height: 3px;
+                margin: 25px auto 0;
+                max-width: 300px; 
+            }
+        }
+    }
+}
+
+.sg-landing {
+    &.sg-landing-01 {
+        h1,
+        .sg-h1,
+        h2,
+        .sg-h2,
+        h3,
+        .sg-h3,
+        h4,
+        .sg-h4,
+        h5,
+        .sg-h5,
+        h6,
+        .sg-h6 {
+            color: $color-white;
+        }
+
+        p {
+            color: $color-text-primary;
+        }
+
+        a {
+            color: $color-white;
+        }
+
+        .sg-landing-01-accent {
+            color: $color-primary;
+        }
+
+        .sg-bg-dark {
+            background-color: $color-blue-dark !important;
+        }
+
+        .sg-btn {
+            &.sg-btn-outline-primary {
+                color: $color-white;
+
+                &:focus,
+                &:not(:disabled):not(.disabled):active,
+                &:not(:disabled):not(.disabled):active:focus {
+                    color: $color-white;
+                }
+            }
+        }
+
+        .sg-icon {
+            align-items: center;
+            background-color: $color-primary-dark;
+            border-radius: 100%;
+            display: inline-flex;
+            height: 64px;
+            justify-content: center;
+            width: 64px;
+
+            svg {
+                font-size: 28px;
+            }
+        }
+
+        .sg-masthead-01 {
+            padding-top: 25px;
+            
+            @media (min-width: 992px) {
+                padding-top: 50px;
+            }
+
+            .navbar-dark {
+                .navbar-nav {
+                    .nav-link {
+                        color: $color-grey-light;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+
+                        &.sg-btn {
+                            &:hover,
+                            &:focus {
+                                text-decoration: none;
+                            }
+
+                            &.sg-btn-primary {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        .sg-content-01 {
+            .col:first-child {
+                h2,
+                svg path {
+                    color: $color-purple;
+                }
+            }
+            .col:nth-child(2) {
+                h2,
+                svg path {
+                    color: $color-pink;
+                }
+            }
+            .col:nth-child(3) {
+                h2,
+                svg path {
+                    color: $color-orange;
+                }
+            }
+            .col:last-child {
+                h2,
+                svg path {
+                    color: $color-green;
+                }
+            }
+        }
+
+        .sg-feature-05 {
+            .sg-icon {
+                & + span {
+                    color: $color-grey-light;
+                }
+
+                .fa-window-maximize path {
+                    fill: $color-blue;
+                }
+    
+                .fa-compress-alt path {
+                    fill: $color-orange;
+                }
+    
+                .fa-chart-line path {
+                    fill: $color-pink;
+                }
+    
+                .fa-heart path {
+                    fill: $color-red;
+                }
+            }
+        }
+
+        .sg-feature-22 {
+            .card {
+                border-radius: 60px;
+
+                &.sg-bg-dark {
+                    background-color: darken($color-primary, 35%) !important;
+                }
+
+                .card-header {
+                    background: $reset-color;
+                    border: $reset-border;
+                }
+            }
+        }
+
+        .sg-footer-01 {
+            a {
+                color: $color-grey-light;
+            }
+        }
+
+        .sg-hero-02 + .sg-feature-05 {
+            background: darken($color-primary, 35%) !important;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+---
+metadata:
+  id: 1
+  name: Navigation Header
+  file_type: header
+  last_edit: 1571049450762
+---
+<header class="sg-masthead sg-masthead-02">
+	<nav class="navbar navbar-expand-lg navbar-dark sg-bg-secondary">
+		<div class="container">
+			<a class="navbar-brand" href="/" title="Home">
+				<img src="{{context.exports.company_information.properties.logo_white | asset_url}}" width="164" />
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				{%- include 'menu', eid:'menu_55523', id:'55523', layout: 'sg-menu-01', name: 'Main Navigation Menu' -%}
+			</div>
+		</div>
+	</nav>
+</header>

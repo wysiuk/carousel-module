@@ -1,0 +1,1 @@
+<button type="button" data-bs-target="#{{ name | replace: ' ', '' }}" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first == true %}class="active" aria-current="true"{% endif %} class="" aria-label="Slide {{ forloop.index }}"></button>

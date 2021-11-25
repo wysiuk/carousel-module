@@ -1,0 +1,25 @@
+---
+layout: templates/1
+max_deep_level: 1
+metadata:
+  id: 1
+  name: Home
+  enabled: true
+  og_desc: Lorem ipsum dolor sit amet
+  og_type: website
+  og_title: Home | Demo
+  file_type: page
+  last_edit: 1634029221644
+  meta_desc: Lorem ipsum dolor sit amet
+  meta_title: Home | Demo
+  is_homepage: true
+  twitter_type: summary_large_image
+redirect_code: 301
+redirect_to: "/"
+redirect_url: "/"
+searchable: true
+slug: home
+---
+{% include 'modules/siteglide_system/constants' -%}
+<h1>Example Carousel</h1>
+{% include 'module', id: '200', per_page: '20', layout: 'default', name: 'Test 1', indicators: 'true', crossfade: 'false', arrows: 'true', touch: 'true', dark: 'false', timer: '6000' %}

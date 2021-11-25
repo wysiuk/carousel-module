@@ -1,0 +1,7 @@
+{
+  "staging": {
+    "url": "https://carousel-module.staging.oregon.platform-os.com/",
+    "token": "68fbde23-c08b-453d-87e6-a0692c4cdb34",
+    "email": "glenn@wysi.co.uk"
+  }
+}

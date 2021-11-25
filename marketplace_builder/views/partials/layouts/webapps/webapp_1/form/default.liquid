@@ -1,0 +1,113 @@
+<div class="sectionPadding">
+	<div class="container">
+		<div class="row text-center justify-content-center">
+			<div class="col-12 col-md-7">
+				<h2>Carousel</h2>
+				<h4>Submit a new WebApp item</h4>
+			</div>
+		</div>
+		<div class="row justify-content-center pt-4">
+			<div class="col-12 col-md-7">
+				{% form -%}
+					<div class="row mt-4">
+						<div class="col">
+							<label for="name">Name</label>
+							<input class="form-control required" name="{{ form_builder.fields.properties.name.name }}" value="{{this.name}}" type="text">
+						</div>
+					</div>
+					<div class="row mt-4 image">
+						<div class="col">
+							<label for="webapp_field_1_1">Desktop Image</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_1.name }}" type="hidden">
+							<input class="form-control sg-form-control" id="webapp_field_1_1_file" type="file">
+						</div>
+					</div>
+					<div class="row mt-4 image">
+						<div class="col">
+							<label for="webapp_field_1_2">Mobile Image</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_2.name }}" type="hidden">
+							<input class="form-control sg-form-control" id="webapp_field_1_2_file" type="file">
+						</div>
+					</div>
+					<div class="row mt-4 input_text">
+						<div class="col">
+							<label for="webapp_field_1_3">Header</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_3.name }}" type="text">
+						</div>
+					</div>
+					<div class="row mt-4 input_text">
+						<div class="col">
+							<label for="webapp_field_1_4">Description</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_4.name }}" type="text">
+						</div>
+					</div>
+					<div class="row mt-4 select">
+						<div class="col">
+							<label for="webapp_field_1_5">Position</label>
+							<select class="" name="{{ form_builder.fields.properties.webapp_field_1_5.name }}">
+								<option value="Top Left">Top Left</option>
+								<option value="Top Right">Top Right</option>
+								<option value="Bottom Left">Bottom Left</option>
+								<option value="Bottom Right">Bottom Right</option>
+							</select>
+						</div>
+					</div>
+					<div class="row mt-4 select">
+						<div class="col">
+							<label for="webapp_field_1_6">Overlay</label>
+							<select class="" name="{{ form_builder.fields.properties.webapp_field_1_6.name }}">
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+						</div>
+					</div>
+					<div class="row mt-4 select">
+						<div class="col">
+							<label for="webapp_field_1_7">Position X</label>
+							<select class=" required" name="{{ form_builder.fields.properties.webapp_field_1_7.name }}">
+								<option value="left">left</option>
+								<option value="middle">middle</option>
+								<option value="right">right</option>
+							</select>
+						</div>
+					</div>
+					<div class="row mt-4 select">
+						<div class="col">
+							<label for="webapp_field_1_8">Position Y</label>
+							<select class=" required" name="{{ form_builder.fields.properties.webapp_field_1_8.name }}">
+								<option value="top">top</option>
+								<option value="center">center</option>
+								<option value="bottom">bottom</option>
+							</select>
+						</div>
+					</div>
+					<div class="row mt-4 input_text">
+						<div class="col">
+							<label for="webapp_field_1_9">Button Name</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_9.name }}" type="text">
+						</div>
+					</div>
+					<div class="row mt-4 input_text">
+						<div class="col">
+							<label for="webapp_field_1_10">Button Link</label>
+							<input class="form-control sg-form-control" name="{{ form_builder.fields.properties.webapp_field_1_10.name }}" type="text">
+						</div>
+					</div>
+
+					<div class="row mt-4">
+						<div class="col">
+							<div class="form-error"></div>
+							<button class="btn buttonAccent" onClick="s_form_submit_v2(this,'webapp_1')">Submit</button>
+						</div>
+					</div>
+					<input class="form-control" name="{{ form_builder.fields.properties.enabled.name }}" value="{{_enabled}}" type="hidden">
+					<input class="form-control" name="{{ form_builder.fields.properties.expiry_date.name }}" value="{{_expiry_date}}" type="hidden">
+					<input class="form-control" name="{{ form_builder.fields.properties.release_date.name }}" value="{{_release_date}}" type="hidden">
+					<input id="s_redirect" value="" type="hidden">
+					<input class="form-control upload_dir" value="{{_upload_dir}}" type="hidden">
+					<input class="form-control" name="{{ form_builder.fields.properties.slug.name }}" value="{{_slug}}" type="hidden">
+				{% endform -%}
+			</div>
+		</div>
+	</div>
+</div>

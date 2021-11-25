@@ -1,0 +1,49 @@
+---
+metadata:
+  id: 1
+  name: Content Template
+  type: page
+  file_type: template
+  last_edit: 1602253525856
+  is_default: false
+  use_studio: true
+  use_studio_bs5: true
+  use_design_system: false
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include 'modules/siteglide_system/siteglide_head' -%}
+	{% if context.exports.company_information.properties.google_analytics_id != blank %}
+		<!-- Google analytics - please update your id in company information -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{context.exports.company_information.properties.google_analytics_id}}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', '{{context.exports.company_information.properties.google_analytics_id}}');
+		</script>
+	{% endif %}
+	<!-- Stops Search Engines treating the same page with different URL parameters as duplicate pages -->
+	<link rel="canonical" href="{{context.headers.PATH_INFO}}">
+	<!-- Add favicon -->
+	<link rel="shortcut icon" href="{{'images/logo/favicon.png' | asset_url }}" type="image/png">
+	<link rel="stylesheet" type="text/css" href="{{ 'css/styles.min.css' | asset_url }}">
+
+</head>
+
+<body>
+	{% include 'modules/siteglide_system/constants' -%}
+
+	{%- include 'header', id: '1', name: 'Navigation Header' -%}
+	{{ content_for_layout }}
+	{%- include 'footer', id: '1', name: 'Footer' -%}
+
+	{% include 'modules/siteglide_system/siteglide_foot' -%}
+</body>
+
+</html>

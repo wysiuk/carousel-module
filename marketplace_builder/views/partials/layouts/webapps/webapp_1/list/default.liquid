@@ -1,0 +1,19 @@
+<div class="{% if forloop.first == true %}active{% endif %} carousel-item" data-bs-interval="{{ timer }}">
+  {% if this['Overlay'] == "Yes" %}<div class="sg-background-overlay"></div>{% endif %}
+  {% if context.device.device_type == "desktop" %}
+    <img src="{{ this['Desktop Image'] | asset_url }}" class="d-block w-100">
+  {% else %}
+    <img src="{{ this['Mobile Image'] | asset_url }}" class="d-block w-100">
+  {% endif %}
+  <div class="carousel-caption {{this['Position Y']}}-{{this['Position X']}}">
+    <h1 class="display-1 text-center text-white">{{this['Header']}}</h1>
+    <p class="text-center text-white mb-4">{{this['Description']}}</p>
+    {% if this['Button Name'] != blank %}
+    <div class="justify-content-center row">
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <a class="btn btn-primary mb-5" href="{{ this['Button Link'] }}">{{ this['Button Name'] }}</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

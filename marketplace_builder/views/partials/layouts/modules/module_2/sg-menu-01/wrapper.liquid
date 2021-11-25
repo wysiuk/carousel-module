@@ -1,0 +1,12 @@
+{%- comment -%} <ul> wrapper, and then output the items within it {%- endcomment -%}
+<ul class="navbar-nav d-flex-lg align-items-lg-center flex-grow-1 justify-content-end">
+	{%- include 'modules/siteglide_menu/get/get_items', item_layout: 'item' -%}
+</ul>
+<style>
+	.nav-link {
+		color: white !important;
+	}
+	.dropdown-menu {
+		background-color: #001A31;
+	}
+</style>
