@@ -6,8 +6,8 @@
     <img src="{{ this['Mobile Image'] | asset_url }}" class="d-block w-100">
   {% endif %}
   <div class="carousel-caption {{this['Position Y']}}-{{this['Position X']}}">
-    <h1 class="display-1 text-center text-white">{{this['Header']}}</h1>
-    <p class="text-center text-white mb-4">{{this['Description']}}</p>
+    <h1 class="display-1 text-center" style="color:{{this['Text Colour']}}">{{this['Header']}}</h1>
+    <p class="text-center mb-4" style="color:{{this['Text Colour']}}">{{this['Description']}}</p>
     {% if this['Button Name'] != blank %}
     <div class="justify-content-center row">
       <div class="col-12 col-md-6 d-flex justify-content-center">
